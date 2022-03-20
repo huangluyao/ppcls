@@ -1,0 +1,11 @@
+{
+    "augmentation": [
+        {"type":"Resize", "size": [256, 256]},
+        {"type":"Crop", "size": [224, 224]},
+        {"type":"Rotate", "degrees": 45}
+    ],
+    "model":{
+        "type": "resnet18",
+        "num_classes": 10
+    }
+}
