@@ -1,7 +1,8 @@
 from ppcls.core.utils import Registry, build_module
 
-OPTIM = Registry("augmentation")
+OPTIM = Registry("optimizer")
 
 
-def build_optimzer(cfg):
-    return build_module(cfg, OPTIM)
+def build_optimizer(cfg, model_params):
+    default_params = {"params": model_params}
+    return build_module(cfg, OPTIM, default_params)

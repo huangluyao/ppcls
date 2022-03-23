@@ -1,4 +1,5 @@
 from ppcls.models import build_model
+from ppcls.core import build_optimizer
 import json
 
 
@@ -11,7 +12,7 @@ if __name__=="__main__":
         cfg = json.load(f)
     model_cfg = cfg["model"]
     model = build_model(model_cfg)
-
+    optim = build_optimizer(cfg["optimizer"], model.parameters())
     print(model)
 
 

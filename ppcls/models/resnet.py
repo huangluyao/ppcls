@@ -6,4 +6,3 @@ MODEL.registry(resnet34, "resnet34")
 MODEL.registry(resnet50, "resnet50")
 MODEL.registry(resnet101, "resnet101")
 MODEL.registry(resnet152, "resnet152")
-

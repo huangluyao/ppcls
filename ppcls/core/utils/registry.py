@@ -15,7 +15,8 @@ class Registry:
 
 
 def build_module(cfg: dict,
-                 register: Registry
+                 register: Registry,
+                 default_params: dict = None,
                  ):
 
     args = cfg.copy() # 防止cfg中的type 这个key消失
@@ -27,6 +28,10 @@ def build_module(cfg: dict,
         obj = register.get(obj_type) # 获取类对象
         if obj is None:
             raise KeyError(f"{obj} is not in the {register.name} registry")
+
+        if default_params is not None:
+            args.update(default_params)
+            pass
         return obj(**args)      # 实例化对象
     else:
         raise KeyError(f"type must be string but got {type(obj_type)}")

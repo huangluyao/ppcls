@@ -5,7 +5,12 @@
         {"type":"Rotate", "degrees": 45}
     ],
     "model":{
-        "type": "resnet18",
-        "num_classes": 10
+        "type": "vgg16",
+        "num_classes": 20
+    },
+    "optimizer": {
+        "type": "AdamW",
+        "lr": 0.01,
+        "weight_decay": 0.001
     }
 }
