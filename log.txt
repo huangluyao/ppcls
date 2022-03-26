@@ -1,0 +1,47 @@
+[32m[ppcls 03/23 15:56:10 INFO train.py:10]:[0m read config file config/test.json
+[32m[ppcls 03/23 15:56:13 INFO train.py:14]:[0m build model
+[32m[ppcls 03/23 15:56:14 INFO train.py:16]:[0m build optimizer
+[ppcls 03/26 11:56:28 INFO simple_trainer.py:29]: build data loader
+[ppcls 03/26 11:58:52 INFO simple_trainer.py:29]: build data loader
+[ppcls 03/26 11:59:34 INFO simple_trainer.py:31]: build model
+[ppcls 03/26 11:59:41 INFO simple_trainer.py:33]: build optimizer
+[ppcls 03/26 12:00:40 INFO simple_trainer.py:29]: build data loader
+[ppcls 03/26 12:00:40 INFO simple_trainer.py:31]: build model
+[ppcls 03/26 12:00:42 INFO simple_trainer.py:33]: build optimizer
+[ppcls 03/26 12:00:43 INFO simple_trainer.py:35]: build loss
+[ppcls 03/26 12:01:16 INFO simple_trainer.py:29]: build data loader
+[ppcls 03/26 12:01:16 INFO simple_trainer.py:31]: build model
+[ppcls 03/26 12:01:18 INFO simple_trainer.py:33]: build optimizer
+[ppcls 03/26 12:01:18 INFO simple_trainer.py:35]: build loss
+[ppcls 03/26 12:02:43 INFO simple_trainer.py:29]: build data loader
+[ppcls 03/26 12:02:43 INFO simple_trainer.py:31]: build model
+[ppcls 03/26 12:02:44 INFO simple_trainer.py:33]: build optimizer
+[ppcls 03/26 12:02:44 INFO simple_trainer.py:35]: build loss
+[ppcls 03/26 12:09:27 INFO simple_trainer.py:29]: ------------------------------run before train------------------------------
+[ppcls 03/26 12:09:27 INFO simple_trainer.py:30]: build data loader
+[ppcls 03/26 12:09:27 INFO simple_trainer.py:32]: build model
+[ppcls 03/26 12:09:28 INFO simple_trainer.py:34]: build optimizer
+[ppcls 03/26 12:09:28 INFO simple_trainer.py:36]: build loss
+[ppcls 03/26 12:10:37 INFO simple_trainer.py:29]: ------------------------------run before train------------------------------
+[ppcls 03/26 12:10:37 INFO simple_trainer.py:30]: build data loader
+[ppcls 03/26 12:10:37 INFO simple_trainer.py:32]: build data loader success
+[ppcls 03/26 12:10:37 INFO simple_trainer.py:33]: build model
+[ppcls 03/26 12:10:38 INFO simple_trainer.py:35]: build model success
+[ppcls 03/26 12:10:38 INFO simple_trainer.py:36]: build optimizer
+[ppcls 03/26 12:10:38 INFO simple_trainer.py:38]: build optimizer success
+[ppcls 03/26 12:10:38 INFO simple_trainer.py:39]: build loss
+[ppcls 03/26 12:10:38 INFO simple_trainer.py:41]: build loss success
+[ppcls 03/26 12:10:48 INFO simple_trainer.py:29]: ------------------------------run before train------------------------------
+[ppcls 03/26 12:10:48 INFO simple_trainer.py:30]: build data loader
+[ppcls 03/26 12:10:48 INFO simple_trainer.py:32]: build data loader success
+[ppcls 03/26 12:10:48 INFO simple_trainer.py:33]: build model
+[ppcls 03/26 12:10:49 INFO simple_trainer.py:35]: build model success
+[ppcls 03/26 12:10:49 INFO simple_trainer.py:36]: build optimizer
+[ppcls 03/26 12:10:49 INFO simple_trainer.py:38]: build optimizer success
+[ppcls 03/26 12:10:49 INFO simple_trainer.py:39]: build loss
+[ppcls 03/26 12:10:49 INFO simple_trainer.py:41]: build loss success
+[ppcls 03/26 12:11:16 INFO simple_trainer.py:29]: ------------------------------run before train------------------------------
+[ppcls 03/26 12:11:16 INFO simple_trainer.py:31]: build data loader success
+[ppcls 03/26 12:11:17 INFO simple_trainer.py:33]: build model success
+[ppcls 03/26 12:11:17 INFO simple_trainer.py:35]: build optimizer success
+[ppcls 03/26 12:11:17 INFO simple_trainer.py:37]: build loss success

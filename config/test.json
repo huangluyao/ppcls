@@ -1,9 +1,55 @@
 {
-    "augmentation": [
-        {"type":"Resize", "size": [256, 256]},
-        {"type":"Crop", "size": [224, 224]},
-        {"type":"Rotate", "degrees": 45}
-    ],
+    "loader": {
+        "augmentation": {
+            "train": [
+                {
+                    "type": "Resize",
+                    "size": [
+                        256,
+                        256
+                    ]
+                },
+                {
+                    "type": "Crop",
+                    "size": [
+                        224,
+                        224
+                    ]
+                },
+                {
+                    "type": "Rotate",
+                    "degrees": 45
+                },
+                {"type": "ToTensor"},
+                {
+                    "type": "Normalize",
+                    "std":[0.229, 0.224, 0.225],
+                    "mean":[0.485, 0.456, 0.406]
+                }
+            ],
+            "val": [
+                {
+                    "type": "Resize",
+                    "size": [
+                        256,
+                        256
+                    ]
+                },
+                {"type": "ToTensor"},
+                {
+                    "type": "Normalize",
+                    "std":[0.229, 0.224, 0.225],
+                    "mean":[0.485, 0.456, 0.406]
+                }
+
+            ]
+        },
+        "train_data_path": "data/flower4/train",
+        "val_data_path": "data/flower4/val",
+        "batch_size": 8,
+        "num_workers": 0
+    },
+
     "model":{
         "type": "vgg16",
         "num_classes": 20
@@ -12,5 +58,6 @@
         "type": "AdamW",
         "lr": 0.01,
         "weight_decay": 0.001
-    }
+    },
+    "max_epoch": 100
 }

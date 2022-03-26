@@ -1,8 +1,10 @@
 import torchvision.transforms.transforms as ts   # torchvision 的数据增强
+from torch.utils.data import DataLoader
 from PIL import Image                            # 图片读取
 import numpy as np
 import cv2
 from ppcls.core.dataset.builder import AUGMENTATION, build_aug
+from .classification_dataset import ClassificationDataset
 
 
 class Compose:
@@ -28,6 +30,18 @@ AUGMENTATION.registry(ts.RandomRotation, "Rotate")
 AUGMENTATION.registry(ts.RandomCrop, "Crop")
 AUGMENTATION.registry(ts.RandomHorizontalFlip, "HorizontalFlip")
 AUGMENTATION.registry(ts.ToTensor)
+
+
+def build_loader(cfg):
+    train_comp = Compose(cfg["augmentation"]["train"])
+    val_comp = Compose(cfg["augmentation"]["val"])
+    train_dataset = ClassificationDataset(cfg["train_data_path"], transform=train_comp)
+    val_dataset = ClassificationDataset(cfg["val_data_path"], transform=val_comp)
+    train_data_loader = DataLoader(dataset=train_dataset, batch_size=cfg["batch_size"],
+                                   shuffle=True, num_workers=cfg["num_workers"])
+    val_data_loader = DataLoader(dataset=val_dataset, batch_size=cfg["batch_size"])
+
+    return train_data_loader, val_data_loader
 
 
 if __name__ == "__main__":

@@ -1,9 +1,10 @@
 import os
+from torch.utils.data.dataset import Dataset
 from PIL import Image
 import numpy as np
 
 
-class ClassificationDataset:
+class ClassificationDataset(Dataset):
 
     def __init__(self, data_path, transform=None):
         self.class_names = []

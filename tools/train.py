@@ -1,18 +1,21 @@
-from ppcls.models import build_model
-from ppcls.core import build_optimizer
+from ppcls.core import setup_logger, SimpleTrainer
 import json
 
 
 if __name__=="__main__":
 
-    # model_cfg = {"type": "mobilenet_v2", "num_classes": 4}
+    logger = setup_logger("log.txt")
     config_path = "config/test.json"
-
     with open(config_path, "r") as f:
         cfg = json.load(f)
-    model_cfg = cfg["model"]
-    model = build_model(model_cfg)
-    optim = build_optimizer(cfg["optimizer"], model.parameters())
-    print(model)
+
+    trainer = SimpleTrainer(cfg, logger)
+    trainer.train()
+
+    # model_cfg = cfg["model"]
+    # logger.info("build model")
+    # model = build_model(model_cfg)
+    # logger.info("build optimizer")
+    # optim = build_optimizer(cfg["optimizer"], model.parameters())
 
 
