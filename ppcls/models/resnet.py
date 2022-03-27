@@ -1,6 +1,7 @@
 from torchvision.models import resnet18, resnet34, resnet50, resnet101, resnet152
 from .builder import MODEL
 
+# 注册resnet
 MODEL.registry(resnet18, "resnet18")
 MODEL.registry(resnet34, "resnet34")
 MODEL.registry(resnet50, "resnet50")
