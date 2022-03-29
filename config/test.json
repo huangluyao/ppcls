@@ -51,13 +51,15 @@
     },
 
     "model":{
-        "type": "vgg16",
-        "num_classes": 20
+        "type": "mobilenet_v2",
+        "pretrained": "mode_zoo/mobilenet/mobilenet_v2-b0353104.pth",
+        "num_classes": 4
     },
+
     "optimizer": {
         "type": "AdamW",
-        "lr": 0.01,
-        "weight_decay": 0.001
+        "lr": 0.001,
+        "weight_decay": 0.00001
     },
     "max_epoch": 100
 }

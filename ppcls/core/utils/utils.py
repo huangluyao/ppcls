@@ -15,6 +15,18 @@ def show_config_values(cfg, prefix="", logger=print):
         else:
             logger(f"{prefix}{key.ljust(20)}\t{cfg[key]}")
 
+class AverageMeter:
+
+    def __init__(self):
+        self.avg = 0
+        self.sum = 0
+        self.count = 0
+
+    def update(self, value, n=1):
+        self.sum += value * n
+        self.count += n
+        self.avg = self.sum / self.count
+
 
 if __name__ == "__main__":
 
