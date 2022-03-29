@@ -5,7 +5,7 @@ def show_config_values(cfg, prefix="", logger=print):
     for key in cfg.keys():
         if isinstance(cfg[key], dict):
             logger(f"{prefix}{key}")
-            show_config_values(cfg[key], prefix="    "+prefix)
+            show_config_values(cfg[key], prefix="    "+prefix, logger=logger)
         elif isinstance(cfg[key], list):
             if len(cfg[key]) > 0 and isinstance(cfg[key][0], dict):
                 for info_dict in cfg[key]:
